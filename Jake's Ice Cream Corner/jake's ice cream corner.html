@@ -1,0 +1,85 @@
+<! DOCTYPE html>
+	<html lang= "en-US">
+	<head>
+	<meta charset="utf-8"/>
+	<title> Jake's Ice Cream Corner</title>
+	<link rel="icon" href="store-icon.png" type="image/x-icon" >
+	<link type= "text/css" rel="stylesheet" href="JICC .css"/>
+	</head>
+	<body class="body">
+		<div id="container">
+			<div id= "Header">
+				<h1 class="header"> Jake's Ice Cream Corner </h1>
+				<p class="hp">Always The Real Thing, Always Ice Cream</p>
+			</div>
+			<div id="left-column">
+					<a class= "NavBar" href="#">Home</a>
+					<a class= "NavBar" href="menu.html">Menu</a>
+					<a class= "NavBar" href="Pop-Up.html">Pop-Up Bar</a>
+					<a class= "NavBar" href="Job.html">Contact us</a>
+			</div>
+			
+			<div id="right-column">
+				<div class="sscontainer">
+					<div class="slides fade">
+						<img src="s1.png" class="image">
+						<div class="text">A treat of life, pure ice cream</div>
+					</div>
+
+					<div class="slides fade" >
+						<img src="s2.png" class="image">
+						<div class="text">new flavors & ultimate faves</div>
+					</div>
+					
+					<div class="slides fade" >
+						<img src="s3.png" class="image">
+						<div class="text">Happiness & sweetness rules</div>
+					</div>
+					
+					<div class="slides fade" >
+						<img src="s4.png" class="image">
+						<div class="text">Customize with your favorites</div>
+					</div>
+					
+					<div class="slides fade" >
+						<img src="s5.png" class="image">
+						<div class="text">Pop-Up Bar every Tuesday & Saturday</div>
+					</div>
+					
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+	    </div>
+	</body>
+	<script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n)
+			 {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n)
+			 {
+			  showSlides(slideIndex = n);
+			}
+			function showSlides(n) 
+			{
+			  let i;
+			  let slides = document.getElementsByClassName("slides");
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			}
+	</script>
+	<div id="Footer"> 
+		Copyright &copy; 2023 Jake's Ice Cream Corner 
+		<a class="footer" href="mailto:Jake@IceCream.com"> Jake@IceCream.com</a>
+	</div>
+	</html>
+
+	
